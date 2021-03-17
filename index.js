@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 3001;
 const carquery = require('./inventorymethods');
 const userquery = require('./usermethods');
 const rulequery = require('./carrulesmethods');
