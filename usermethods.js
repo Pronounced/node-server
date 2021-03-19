@@ -1,8 +1,14 @@
 const fs = require('fs');
+const Users = require('./models/users.model');
 
-const getData = () => {
-  let rawdata = fs.readFileSync('users.json');
-  return JSON.parse(rawdata);
+const getData = async () => {
+  var results = [];
+  await Users.find({}).then(res => {
+    // res.forEach(item => { results.push(item) });
+    console.log("res:", res);
+  });
+  console.log(results);
+  return results;
 }
 
 // const postData = (data) => {

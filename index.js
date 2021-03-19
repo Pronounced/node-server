@@ -5,6 +5,8 @@ const carquery = require('./inventorymethods');
 const userquery = require('./usermethods');
 const rulequery = require('./carrulesmethods');
 const cors = require('cors');
+const CarRules = require("./models/carrules.model");
+const connectDb = require("./connection");
 
 app.use(cors());
 app.use(express.json());
@@ -65,4 +67,7 @@ app.delete('/deleterule', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
+  connectDb().then(() => {
+    console.log("MongoDb connected");
+  });
 });

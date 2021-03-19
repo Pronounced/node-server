@@ -1,1 +1,65 @@
-[{"vin":"1HGCR2F76EA238747","year":"2014","make":"Honda","model":"Accord EX","seller":"1","color":"red","isApproved":true},{"vin":"YV4940DL7D2411290","year":"2013","make":"Volvo","model":"XC60 3.2","seller":"2","color":"blue","isApproved":true},{"vin":"4T1BK36B66U016696","year":"2016","make":"Toyota","model":"Avalon Limited","seller":"3","color":"blue","isApproved":true},{"year":"1","make":"2","model":"3","color":"4","seller":"admin","vin":"2S3TD03V2WMYULD1M","isApproved":true},{"year":"2001","make":"BMW","model":"M3","color":"blue","seller":"1","vin":"2D8HN54X49GZXXH1D","isApproved":true},{"year":"2001","make":"BMW","model":"M3","color":"blue","seller":"1","vin":"1GCCSCCE1BFEH0FXZ","isApproved":true},{"year":"4","make":"5","model":"6","color":"7","seller":"admin","vin":"1B8GT44311RUMD0ER","isApproved":true}]
+[
+  {
+    "vin": "1HGCR2F76EA238747",
+    "year": "2014",
+    "make": "Honda",
+    "model": "Accord EX",
+    "seller": "1",
+    "color": "red",
+    "isApproved": true
+  },
+  {
+    "vin": "YV4940DL7D2411290",
+    "year": "2013",
+    "make": "Volvo",
+    "model": "XC60 3.2",
+    "seller": "2",
+    "color": "blue",
+    "isApproved": true
+  },
+  {
+    "vin": "4T1BK36B66U016696",
+    "year": "2016",
+    "make": "Toyota",
+    "model": "Avalon Limited",
+    "seller": "3",
+    "color": "blue",
+    "isApproved": true
+  },
+  {
+    "year": "1",
+    "make": "2",
+    "model": "3",
+    "color": "4",
+    "seller": "admin",
+    "vin": "2S3TD03V2WMYULD1M",
+    "isApproved": true
+  },
+  {
+    "year": "2001",
+    "make": "BMW",
+    "model": "M3",
+    "color": "blue",
+    "seller": "1",
+    "vin": "2D8HN54X49GZXXH1D",
+    "isApproved": true
+  },
+  {
+    "year": "2001",
+    "make": "BMW",
+    "model": "M3",
+    "color": "blue",
+    "seller": "1",
+    "vin": "1GCCSCCE1BFEH0FXZ",
+    "isApproved": true
+  },
+  {
+    "year": "4",
+    "make": "5",
+    "model": "6",
+    "color": "7",
+    "seller": "admin",
+    "vin": "1B8GT44311RUMD0ER",
+    "isApproved": true
+  }
+]

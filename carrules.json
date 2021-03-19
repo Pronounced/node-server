@@ -1,1 +1,26 @@
-[{"name":"First","startYear":"1960","endYear":"2020","make":"Chevrolet","model":"Impala","color":"black"},{"name":"Second","startYear":"1990","endYear":"2010","make":"Ford","model":"Mustang","color":"red"},{"name":"Third","startYear":"2000","endYear":"2005","make":"BMW","model":"M3","color":"blue"}]
+[
+  {
+    "name": "First",
+    "startYear": "1960",
+    "endYear": "2020",
+    "make": "Chevrolet",
+    "model": "Impala",
+    "color": "black"
+  },
+  {
+    "name": "Second",
+    "startYear": "1990",
+    "endYear": "2010",
+    "make": "Ford",
+    "model": "Mustang",
+    "color": "red"
+  },
+  {
+    "name": "Third",
+    "startYear": "2000",
+    "endYear": "2005",
+    "make": "BMW",
+    "model": "M3",
+    "color": "blue"
+  }
+]
