@@ -1,15 +1,17 @@
-const fs = require('fs');
+const CarRules = require('./models/carrules.model');
 
-const getData = () => {
-  let rawdata = fs.readFileSync('carrules.json');
-  return JSON.parse(rawdata);
+const getData = async () => {
+  var results = [];
+  await CarRules.find({}).then(res => {
+    res.forEach(item => {
+      results.push(item) 
+    });
+  });
+  return results;
 }
 
 const postData = (data) => {
-  var state = getData();
-  state.push(data);
-  fs.writeFileSync('carrules.json', JSON.stringify(state));
-  return state;
+  return CarRules.insertMany(data);
 }
 
 // const putData = (data) => {
@@ -23,12 +25,8 @@ const postData = (data) => {
 //   return state;
 // }
 
-const deleteData = (data) => {
-  var state = getData();
-  var index = state.indexOf(data);
-  state.splice(index, 1);
-  fs.writeFileSync('carrules.json', JSON.stringify(state));
-  return state;
+const deleteData = async (data) => {
+  await CarRules.deleteOne({ name: data.name });
 }
 
 module.exports = {getData, postData, deleteData};

@@ -6,14 +6,13 @@ const userquery = require('./usermethods');
 const rulequery = require('./carrulesmethods');
 const cors = require('cors');
 const connectDb = require("./connection");
-const { rawListeners } = require('./models/users.model');
 
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
   if(res.statusCode === 200) {
-    res.send(carquery.getData());
+    res.send( await carquery.getData());
   } else {
     console.log(res.statusCode);
   }
@@ -28,9 +27,9 @@ app.post('/postcar', (req, res) => {
   }
 });
 
-app.put('/putcar', (req, res) => {
+app.put('/putcar', async (req, res) => {
   if(res.statusCode === 200){
-    res.send(carquery.putData(req.body));
+    res.send(await carquery.putData(req.body));
   } else {
     console.log(res.statusCode);
   }
@@ -52,8 +51,8 @@ app.get('/getusers', async (req, res) => {
   }
 });
 
-app.get('/getrules', (req, res) => {
-  res.status(200).send(rulequery.getData());
+app.get('/getrules', async (req, res) => {
+  res.status(200).send(await rulequery.getData());
 });
 
 
@@ -65,9 +64,9 @@ app.post('/postrule', (req, res) => {
   }
 });
 
-app.delete('/deleterule', (req, res) => {
+app.delete('/deleterule', async (req, res) => {
   if(res.statusCode === 200){
-    res.send(rulequery.deleteData(req.body));
+    res.send(await rulequery.deleteData(req.body));
   } else {
     console.log(res.statusCode);
   }
