@@ -6,7 +6,8 @@ const inventorySchema = new mongoose.Schema({
   model: String,
   seller: String,
   color: String,
-  isApproved: Boolean
+  isApproved: Boolean,
+  image: String
 });
 
 const Inventory = mongoose.model("Inventory", inventorySchema);

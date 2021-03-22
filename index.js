@@ -4,6 +4,7 @@ const port = 3001;
 const carquery = require('./inventorymethods');
 const userquery = require('./usermethods');
 const rulequery = require('./carrulesmethods');
+const messagequery = require('./messagesmethods');
 const cors = require('cors');
 const connectDb = require("./connection");
 
@@ -52,7 +53,11 @@ app.get('/getusers', async (req, res) => {
 });
 
 app.get('/getrules', async (req, res) => {
-  res.status(200).send(await rulequery.getData());
+  if(res.statusCode === 200){
+    res.send(await rulequery.getData());
+  } else {
+    console.log(res.statusCode);
+  }
 });
 
 
@@ -69,6 +74,22 @@ app.delete('/deleterule', async (req, res) => {
     res.send(await rulequery.deleteData(req.body));
   } else {
     console.log(res.statusCode);
+  }
+})
+
+app.get('/getmessages', async (req, res) => {
+  if(res.statusCode === 200){
+    res.send(await messagequery.getData());
+  } else {
+    console.log(res.statusCode);
+  }
+})
+
+app.post('/postmessage', (req, res) => {
+  if(res.statusCode === 200){
+    res.send(messagequery.postData(req.body));
+  } else {
+      console.log(res.statusCode);
   }
 })
 
