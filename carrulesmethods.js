@@ -7,7 +7,6 @@ const getData = async () => {
       results.push(item) 
     });
   });
-  console.log(results);
   return results;
 }
 
