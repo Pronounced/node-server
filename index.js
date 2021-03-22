@@ -5,14 +5,18 @@ const carquery = require('./inventorymethods');
 const userquery = require('./usermethods');
 const rulequery = require('./carrulesmethods');
 const cors = require('cors');
-const CarRules = require("./models/carrules.model");
 const connectDb = require("./connection");
+const { rawListeners } = require('./models/users.model');
 
 app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.status(200).send(carquery.getData());
+  if(res.statusCode === 200) {
+    res.send(carquery.getData());
+  } else {
+    console.log(res.statusCode);
+  }
 });
 
 
@@ -20,7 +24,7 @@ app.post('/postcar', (req, res) => {
   if(res.statusCode === 200){
     res.send(carquery.postData(req.body));
   } else {
-      console.log(res.statusCode);
+    console.log(res.statusCode);
   }
 });
 
@@ -40,8 +44,12 @@ app.delete('/deletecar', (req, res) => {
   }
 })
 
-app.get('/getusers', (req, res) => {
-  res.status(200).send(userquery.getData());
+app.get('/getusers', async (req, res) => {
+  if(res.statusCode === 200){
+    res.send(await userquery.getData());
+  } else {
+    console.log(res.statusCode);
+  }
 });
 
 app.get('/getrules', (req, res) => {
