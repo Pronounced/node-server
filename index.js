@@ -95,7 +95,17 @@ app.post('/postmessage', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
-  connectDb().then(() => {
-    console.log("MongoDb connected");
-  });
+ // connectDb().then(() => {
+  //  console.log("MongoDb connected");
+ // });
 });
+
+
+app.get("/test", async (req, res) => {
+  if (res.statusCode === 200) {
+     res.json({ message: "pass!" });
+  } else {
+    console.log(res.statusCode);
+  }
+});
+module.exports = app;
