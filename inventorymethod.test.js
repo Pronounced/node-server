@@ -33,6 +33,7 @@ it("Should save user to database", async (done) => {
   });
 
   expect(res.status).toBe(200);
+  jest.setTimeout(30000);
   done();
 });
 
