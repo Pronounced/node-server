@@ -10,8 +10,8 @@ app.use(express.json());
 
 beforeAll(async (done) => {   
   app.use('/', catalogRouter)
-  //const url = `mongodb://localhost/${databaseName}`;
-  const url = `mongodb://localhost:27017/${databaseName}?authSource=admin`;
+  const url = `mongodb://localhost/${databaseName}`;
+  //const url = `mongodb://localhost:27017/${databaseName}?authSource=admin`;
   await mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
