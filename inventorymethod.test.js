@@ -50,6 +50,7 @@ it("Should save user to database", async (done) => {
     image: "str_img",
   });
 
+  expect(await request.get('/').then(res => res.body.length)).toBeGreaterThan(0);
   expect(res.status).toBe(200);
   done();
 });
