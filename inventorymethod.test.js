@@ -39,6 +39,7 @@ it("Should save user to database", async (done) => {
 
 // Cleans up database between each test
 afterEach(async (done) => {
+  jest.setTimeout(30000);
   await Inventory.deleteMany();
   done();
 });
