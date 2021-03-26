@@ -22,22 +22,22 @@ beforeAll(async (done) => {
   done();
 });
 
-// it("Should get data from database", async (done) => {
-//   const res = await request.post("/postcar").send({
-//     vin: "String_vin",
-//     year: 2020,
-//     make: "str_make",
-//     model: "srr_model",
-//     seller: "str_seller",
-//     color: "str_color",
-//     isApproved: true,
-//     image: "str_img",
-//   });
+it("Should get data from database", async (done) => {
+  const res = await request.post("/postcar").send({
+    vin: "String_vin",
+    year: 2020,
+    make: "str_make",
+    model: "srr_model",
+    seller: "str_seller",
+    color: "str_color",
+    isApproved: true,
+    image: "str_img",
+  });
 
-//   console.log(await request.get('/').then(res => res.body));
-//   expect(await request.get('/').then(res => res.body.length)).toBeGreaterThan(0);
-//   done();
-// })
+  console.log(await request.get('/').then(res => res.body));
+  expect(await request.get('/').then(res => res.body.length)).toBeGreaterThan(0);
+  done();
+})
 
 it("Should save user to database", async (done) => {
   const res = await request.post("/postcar").send({
@@ -51,7 +51,6 @@ it("Should save user to database", async (done) => {
     image: "str_img",
   });
 
-  console.log(await request.get('/').then(res => res.body));
   expect(await request.get('/').then(res => res.body.length)).toBeGreaterThan(0);
   expect(res.status).toBe(200);
   done();
