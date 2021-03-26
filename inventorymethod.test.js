@@ -9,7 +9,7 @@ var catalogRouter = require('./routes/catalog');
 
 beforeAll(async (done) => {   
   app.use('/', catalogRouter)
-  const url = `mongodb://localhost:27017/${databaseName}?authSource=admin`;
+  const url = `mongodb://localhost/${databaseName}?authSource=admin`;
   await mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
