@@ -34,7 +34,7 @@ it("Should get data from database", async (done) => {
     image: "str_img",
   });
 
-  console.log(await request.get('/').then(res => res.body.length));
+  console.log(await request.get('/').then(res => res.body));
   expect(await request.get('/').then(res => res.body.length)).toBeGreaterThan(0);
   done();
 })
