@@ -15,8 +15,8 @@ beforeAll(async (done) => {
   await mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    user: "root",
-    pass: "example",
+    // user: "root",
+    // pass: "example",
   });
 
   done();
