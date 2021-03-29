@@ -7,7 +7,7 @@ var catalogRouter = require('./routes/catalog');
 app.use(cors());
 app.use(express.json());
 
-app.use('/', catalogRouter);
+app.use('/getcars', catalogRouter);
 app.use('/postcar', catalogRouter);
 app.use('/putcar', catalogRouter);
 app.use('/getusers', catalogRouter);

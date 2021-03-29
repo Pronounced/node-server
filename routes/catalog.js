@@ -6,7 +6,7 @@ var user_controller = require('../controllers/usercontroller');
 var carrule_controller = require('../controllers/carrulecontroller');
 var message_controller = require('../controllers/messagecontroller');
 
-router.get('/', inventory_controller.getcar);
+router.get('/getcars', inventory_controller.getcar);
 router.post('/postcar', inventory_controller.postcar);
 router.put('/putcar', inventory_controller.putcar);
 router.get('/getusers', user_controller.getuser);
