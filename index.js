@@ -1,21 +1,24 @@
 const express = require('express');
 const app = express();
-const port = 3001;
+const port = 3002;
 const cors = require('cors');
 const connectDb = require("./connection");
-var catalogRouter = require('./routes/catalog');
 app.use(cors());
 app.use(express.json());
+var inventory_controller = require('./controllers/inventorycontroller');
+var user_controller = require('./controllers/usercontroller');
+var carrule_controller = require('./controllers/carrulecontroller');
+var message_controller = require('./controllers/messagecontroller');
 
-app.use('/getcars', catalogRouter);
-app.use('/postcar', catalogRouter);
-app.use('/putcar', catalogRouter);
-app.use('/getusers', catalogRouter);
-app.use('/getrules', catalogRouter);
-app.use('/postrule', catalogRouter);
-app.use('/deleterule', catalogRouter);
-app.use('/getmessages', catalogRouter);
-app.use('/postmessages', catalogRouter);
+app.use('/getcars', inventory_controller.getcar);
+app.post('/postcar', inventory_controller.postcar);
+app.put('/putcar', inventory_controller.putcar);
+app.get('/getusers', user_controller.getuser);
+app.get('/getrules', carrule_controller.getrule);
+app.post('/postrule', carrule_controller.postrule);
+app.delete('/deleterule', carrule_controller.deleterule);
+app.get('/getmessages', message_controller.getmessages);
+app.get('/postmessage', message_controller.postmessage);
 
 app.listen(port, () => {
  connectDb().then(() => {
