@@ -19,7 +19,7 @@ app.get('/getrules', carrule_controller.getrule);
 app.post('/postrule', carrule_controller.postrule);
 app.delete('/deleterule', carrule_controller.deleterule);
 app.get('/getmessages', message_controller.getmessages);
-app.get('/postmessage', message_controller.postmessage);
+app.post('/postmessage', message_controller.postmessage);
 
 app.listen(port, () => {
  connectDb().then(() => {
