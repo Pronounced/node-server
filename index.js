@@ -14,6 +14,7 @@ app.use('/getcars', inventory_controller.getcar);
 app.post('/postcar', inventory_controller.postcar);
 app.put('/putcar', inventory_controller.putcar);
 app.get('/getusers', user_controller.getuser);
+app.post('/postuser', user_controller.postuser);
 app.get('/getrules', carrule_controller.getrule);
 app.post('/postrule', carrule_controller.postrule);
 app.delete('/deleterule', carrule_controller.deleterule);
