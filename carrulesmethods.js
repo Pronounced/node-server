@@ -14,17 +14,6 @@ const postData = (data) => {
   return CarRules.insertMany(data);
 }
 
-// const putData = (data) => {
-//   var state = getData();
-//   state.map((element) => {
-//     if(data.vin === element.vin) {
-//       element.isApproved = data.isApproved;
-//       fs.writeFileSync('carrules.json', JSON.stringify(state));
-//     }
-//   });
-//   return state;
-// }
-
 const deleteData = async (data) => {
   await CarRules.deleteOne({ name: data.name });
 }

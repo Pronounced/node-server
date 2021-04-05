@@ -23,11 +23,3 @@ exports.putcar = async function (req, res) {
     console.log(res.statusCode);
   }
 }
-
-// delete('/deletecar', (req, res) => {
-//   if(res.statusCode === 200){
-//     res.send(carquery.deleteData(req.body));
-//   } else {
-//     console.log(res.statusCode);
-//   }
-// })
