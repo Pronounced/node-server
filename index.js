@@ -9,6 +9,7 @@ var inventory_controller = require('./controllers/inventorycontroller');
 var user_controller = require('./controllers/usercontroller');
 var carrule_controller = require('./controllers/carrulecontroller');
 var message_controller = require('./controllers/messagecontroller');
+const router = require('./routes/catalog');
 
 app.use('/getcars', inventory_controller.getcar);
 app.post('/postcar', inventory_controller.postcar);

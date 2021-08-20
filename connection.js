@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const connection = "mongodb://mongo:27017/carDealership?authSource=admin";
+const connection = "mongodb://localhost:27017/carDealership?authSource=admin";
 const connectDb = () => {
   return mongoose.connect(connection, {
     useNewUrlParser: true,
