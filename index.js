@@ -11,6 +11,9 @@ var carrule_controller = require('./controllers/carrulecontroller');
 var message_controller = require('./controllers/messagecontroller');
 const router = require('./routes/catalog');
 
+app.get('/', function (req, res) {
+  res.send('Hello World!  Use Azure!');
+});
 app.use('/getcars', inventory_controller.getcar);
 app.post('/postcar', inventory_controller.postcar);
 app.put('/putcar', inventory_controller.putcar);
