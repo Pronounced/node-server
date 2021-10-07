@@ -5,8 +5,8 @@ const connectDb = () => {
   return mongoose.connect(connection, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    user: "root",
-    pass: "example"
+    // user: "root",
+    // pass: "example"
   });
 };
 module.exports = connectDb;
